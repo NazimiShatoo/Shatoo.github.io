@@ -3,68 +3,85 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Shatoo</title>
+		<style type="text/css">
+			@font-face {
+				font-family:determination;
+				src: url('font/determinationmonoweb-webfont.ttf');
+				src: url('font/determinationsansweb-webfont.ttf');
+			}
+		</style>
 		<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script type="text/javascript">
 			var maincolor="#F18F2E";
 			$(function(){
-				$("body").css("background","black");
-				$("body").css("color",maincolor);
+				$("body").css("background","black").css("color",maincolor).css("font-family","determination").css("font-size","20px");
 				$("a").css("text-decoration","none");
 				$("a").css("color","yellow");
 				$("a").attr("target","_blank");
 				$(".table span").css("color","yellow");
-				$(".table td").css("text-align","center");
 				$(".table").css("border",maincolor+" solid 1px");
-				$(".tabletitle").css("height","50px");
+				$(".table").css("padding","20");
+				$(".tabletitle").css("height","50px").css("text-align","center");
 				$("#all").fadeIn();
+				$(".hideabout").hide();
+				$("#aboutme").click(function(){
+					$(".hideabout").fadeToggle();
+				})
 			})
 		</script>
 	</head>
 	
 	<body>
-		<div id="all" style="display: none;"  align="center">
-			<table class="table"  width="150px">
-				<tr align="left">
-					<th colspan="3">	"Shatoo"</th>
+		<div id="all" style="display: none;" align="center">
+			<table class="table" width="150px" >
+				<tr>
+					<td colspan="3" style="font-size: 30px;">"Shatoo"</td>
 				</tr>
 				<tr align="left">
-					<th colspan="3">LV 	1</th>
+					<td colspan="1">LV 1</td>
+					<td colspan="2" rowspan="4" align="center"><img src="image/me.png" width="170px"></td>
 				</tr>
 				<tr align="left">
-					<th  colspan="3">HP 	17/20</th>
+					<td  colspan="1">HP 17/20</td>
 				</tr>
 				<tr align="left">
-					<th  colspan="3">AT 	1       EXP:17</th>
+					<td  colspan="1">AT 1<br>DF 1</td>
 				</tr>
 				<tr align="left">
-					<th  colspan="3">DF 	1 			</th>
-				</tr>
-				<tr align="left">
-					<th  colspan="3">GOLD 	0 			</th>
+					<td  colspan="1">GOLD 0</td>
 				</tr>
 				
-				<tr class="tabletitle">
-					<th colspan="3">About me</th>
+				<tr id="aboutme" class="tabletitle">
+					<td colspan="3">About me</td>
 				</tr>
 					<tr>
-						<td colspan="3">I am kind,Hope to be friends with you🥰</td>
+						<td colspan="3">*Can be friends</td>
 					</tr>
 					<tr>
-						<td>Language</td>
+						<td>Language:</td>
 						<td colspan="3">Simplified Chinese</td>
 					</tr>
-					<tr>
-						<td>MainSkill</td>
+					<tr class="hideabout">
+						<td>Character:</td>
+						<td colspan="3">Introvert/Pessimistic/Jealous</td>
+					</tr>
+					<tr class="hideabout">
+						<td>Skill:</td>
 						<td colspan="3">Java/C#/SQL/HTML/CSS/JavaScipt</td>
+					</tr class="hideabout">
+					<tr>
+						<td>Hobby:</td>
+						<td colspan="3">Unity3d/TouhouProject</td>
 					</tr>
 					<tr>
-						<td>MainGame</td>
+						<td>Game:</td>
 						<td colspan="3">VRChat/Beat Saber</td>
 					</tr>
+					
 				
 				<tr class="tabletitle">
-					<th colspan="3">Contact information</th>
+					<td colspan="3">Contact information</td>
 				</tr>
 				<tr>
 					<td>Twitter:</td>
@@ -80,7 +97,7 @@
 				</tr>
 				<tr>
 					<td>Booth:</td>
-					<td colspan="2"><a href="https://shatoo.booth.pm/">Shatoo🍋レモンショップ</a></td>
+					<td colspan="2" style="font-size:16px"><a href="https://shatoo.booth.pm/">Shatoo🍋レモンショップ</a></td>
 				</tr>
 				<tr>
 					<td>VRChat:</td>
