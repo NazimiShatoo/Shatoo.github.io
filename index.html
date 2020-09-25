@@ -25,7 +25,13 @@
 				$(".tabletitle").css("height","50px").css("text-align","center");
 				$("#all").fadeIn();
 				$(".hideabout").hide();
+				
+				var birthday=new Date("2002-5-27".replace(/-/g, "\/")); 
+				var d=new Date(); 
+				var age = d.getFullYear()-birthday.getFullYear()-((d.getMonth()<birthday.getMonth()|| d.getMonth()==birthday.getMonth() && d.getDate()<birthday.getDate())?1:0);
+				$("age").text(age);
 			})
+			
 		</script>
 	</head>
 	
@@ -40,8 +46,8 @@
 					<td colspan="2" rowspan="4" align="center"><img src="image/me.png" width="170px"></td>
 				</tr>
 				<tr align="left">
-					<td  colspan="1">HP 18/20</td>
-				</tr>
+					<td  colspan="1">HP <age>-1</age>/20</td>
+				</tr
 				<tr align="left">
 					<td  colspan="1">AT 1<br>DF 1</td>
 				</tr>
@@ -95,7 +101,7 @@
 				</tr>
 				<tr>
 					<td>Booth:</td>
-					<td colspan="2" style="font-size:16px"><a href="https://shatoo.booth.pm/">Shatoo🍋レモンショップ</a></td>
+					<td colspan="2" style="font-size:16px"><a href="https://shatoo.booth.pm/">Shatooレモンショップ</a></td>
 				</tr>
 				<tr>
 					<td>VRChat:</td>
